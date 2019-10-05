@@ -15,9 +15,7 @@ module.exports = function check(str, bracketsConfig) {
 
         if (str.length === 0) {
             return true;
-        } else if (str.length === 1) {
-            return false;
-        }
+        } 
 
         for (let j = 0; j < str.length; j++) {
             if (j === str.length - 1) {
