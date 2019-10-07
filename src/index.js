@@ -4,7 +4,7 @@ module.exports = function check(str, bracketsConfig) {
     let bracketPairs = new Map(bracketsConfig);
     str = str.split('');
 
-    while (true) {
+    while (currentSample.length > 0) {
         let i = 1;
 
         if (prevSample.length === currentSample.length) {
@@ -12,10 +12,6 @@ module.exports = function check(str, bracketsConfig) {
         }
 
         prevSample = currentSample;
-
-        if (str.length === 0) {
-            return true;
-        }
 
         for (let j = 0; j < str.length - 1; j++) {
 
@@ -29,4 +25,5 @@ module.exports = function check(str, bracketsConfig) {
         }
         currentSample = str;
     }
+    return true;
 }
