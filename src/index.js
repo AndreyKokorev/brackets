@@ -15,12 +15,10 @@ module.exports = function check(str, bracketsConfig) {
 
         if (str.length === 0) {
             return true;
-        } 
+        }
 
-        for (let j = 0; j < str.length; j++) {
-            if (j === str.length - 1) {
-                break;
-            }
+        for (let j = 0; j < str.length - 1; j++) {
+
             if (bracketPairs.get(str[j]) === str[i]) {
                 str.splice(j, 2);
                 j -= 2;
